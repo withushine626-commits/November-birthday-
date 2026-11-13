@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 23rd Birthday to My Girl! 🌸🧸💍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #e1bee7);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Pyidaungsu', sans-serif;
+            overflow-x: hidden;
+            color: #4a4a4a;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 580px;
+            width: 92%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            font-family: 'Sacramento', cursive;
+            font-size: 3rem;
+            color: #d81b60;
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: #880e4f;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .center-text {
+            text-align: center;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .btn {
+            background: #d81b60;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: 'Pyidaungsu', sans-serif;
+            box-shadow: 0 4px 15px rgba(216, 27, 96, 0.3);
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #ad1457;
+            transform: scale(1.05);
+        }
+        /* Grid Boxes for Gift Choices */
+        .grid-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .choice-card {
+            background: #fff;
+            border: 2px solid #f8bbd0;
+            padding: 15px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .choice-card:hover {
+            border-color: #d81b60;
+            background: #fff0f5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(216,27,96,0.15);
+        }
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+        .card-title {
+            font-weight: bold;
+            color: #880e4f;
+            font-size: 0.85rem;
+        }
+        /* Floating Animation Elements */
+        .heart {
+            position: absolute;
+            color: #d81b60;
+            font-size: 20px;
+            animation: flyUp 4s linear infinite;
+            opacity: 0.7;
+        }
+        @keyframes flyUp {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+        .summary-box {
+            background: #fff5f8;
+            border-left: 4px solid #d81b60;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            color: #880e4f;
+            font-weight: bold;
+        }
+        .message-box {
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 5px;
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #fce4ec;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background Elements -->
+    <div id="hearts-container"></div>
+
+    <div class="container">
+        <!-- Step 1: Welcome -->
+        <div id="step-1" class="section active">
+            <h1>Happy 23rd Birthday!</h1>
+            <h2 class="center-text">ဂျပန်မှာရောက်နေတဲ့ ၂၀၀၃ ခုနှစ်ဖွား ကိုယ့်ကောင်မလေးအတွက် 🌸</h2>
+            <p class="center-text">၂၃ နှစ်ပြည့် မွေးနေ့လေးမှာ ကိုယ်ပြင်ဆင်ပေးထားတဲ့ အထူးဆုတောင်းနဲ့ Surprise လေးကို ဖွင့်ကြည့်ဖို့ အောက်ကခလုတ်ကို နှိပ်လိုက်ဦးနော်။ ✨</p>
+            <button class="btn" onclick="nextStep(2)">Surprise ဖွင့်မည် 🎁</button>
+        </div>
+
+        <!-- Step 2: Long Heartfelt Message -->
+        <div id="step-2" class="section">
+            <h1>To My Special One ❤️</h1>
+            <div class="message-box">
+                <p>ချစ်ရတဲ့ ကိုယ့်ရဲ့ကောင်မလေးရေ... 🌸</p>
+                <p>ဒီနေ့ကတော့ ကိုယ့်အတွက်ရော မင်းအတွက်ပါ အထူးခြားဆုံးနဲ့ အသာယာဆုံး နေ့ရက်တစ်ရက်ကို ရောက်လာခဲ့ပြီပေါ့။ ၂၀၀၃ ခုနှစ်၊ နိုဝင်ဘာ ၁၄ ရက်နေ့မှာ မွေးဖွားခဲ့တဲ့ ကိုယ့်ရဲ့အသည်းတုံးလေး တစ်နှစ်ထပ်ကြီးလာပြီး ဒီကနေ့မှာ (၂၃) နှစ်ပြည့် အလှည့်ကို ရောက်ရှိလို့လာခဲ့ပြီနော်။ မွေးနေ့မှာ အရင်ဆုံး ကိုယ့်ဘက်ကနေ အပျော်ရွှင်ရဆုံး၊ အပြုံးတွေနဲ့ အလှပဆုံး ဖြတ်သန်းနိုင်ပါစေလို့ ဆုတောင်းပေးလိုက်ပါတယ် ကလေးရယ်... ❤️</p>
+                <p>ဂျပန်နိုင်ငံဆိုတဲ့ ရေခြားမြေခြားမှာ တစ်ယောက်တည်း ရုန်းကန်နေရတယ်ဆိုတာ ဘယ်လောက်တောင် ပင်ပန်းပြီး အာရုံနောက်စရာကောင်းမလဲဆိုတာ ကိုယ်သိပါတယ်။ ဒါပေမဲ့ ဘယ်လောက်ပဲ ခက်ခဲပါစေ နေ့တိုင်းကြိုးစားနေတာ၊ ရဲရင့်ပြနေတာတွေကို မြင်တိုင်း ကိုယ်ကတော့ အမြဲတမ်း ဂုဏ်ယူနေမိတယ်။ အနားမှာ ကိုယ်ကိုယ်တိုင် ကိုယ်ထိလက်ရောက် မစောင့်ရှောက်ပေးနိုင်ပေမယ့်၊ ကိုယ့်ရဲ့ အတူရှိနေပေးချင်တဲ့ စိတ်တွေ၊ မေတ္တာတွေကတော့ ဂျပန်အထိ အရောက်သွားပြီး မင်းကို အမြဲစောင့်ရှောက်နေမှာပါနော်။</p>
+                <p>ဒီနှစ်မွေးနေ့မှာ ကိုယ်ကိုယ်တိုင် လက်ဆောင်ကြီးကြီးမားမား ကိုယ်တိုင်လာပေးလို့ မရသေးပေမယ့်၊ ကိုယ်ပေးချင်တဲ့ ဆာကူရာပန်းစည်းတွေ၊ ချစ်စရာဝက်ဝံရုပ်လေးတွေနဲ့ တန်ဖိုးရှိတဲ့ လက်စွပ်လေးတွေကို ကိုယ့်ရဲ့ ရင်ခုန်သံတွေနဲ့ အစားထိုးပြီး ပေးအပ်လိုက်ပါတယ်။ တကယ်တော့ လက်ဆောင်တွေထက် မင်းဒီလိုအသက်ဆက်ကြီးလာပြီး ကိုယ့်ဘဝထဲမှာ ရှိနေပေးတာက ကိုယ်အတွက် အကြီးမားဆုံး ဆုလာဘ်ပါပဲ။</p>
+                <p>နောင်လာမယ့် မွေးနေ့တွေမှာတော့ အခုလို ဝေးကွာနေစရာမလိုဘဲ အနားမှာ အမြဲရှိနေပြီး ပျော်ပွဲရွှင်ပွဲတွေ အတူတူလုပ်နိုင်ဖို့ ကိုယ်လည်း အမြဲကြိုးစားနေပါတယ်။ စိတ်ဖိစီးမှုတွေ၊ ပင်ပန်းမှုတွေကို ဒီမွေးနေ့မှာ ခဏလောက် ဖယ်ထားလိုက်ပြီး ကိုယ်ကြိုက်တာတွေစား၊ လိုချင်တာတွေဝယ်၊ အပျော်ဆုံးနေ့ရက်လေး ဖြစ်အောင် ဖြတ်သန်းနော်။</p>
+                <p>မြန်မာပြည်ကနေ ဂျပန်အထိ လွမ်းရတဲ့ ကိုယ့်ရဲ့ကောင်မလေး... ၂၃ နှစ်ပြည့် မွေးနေ့မှာ လိုအဆန္ဒတွေ အားလုံးပြည့်ဝပါစေ၊ နေ့တိုင်း ကျန်းမာ၊ ချောမော၊ ကံကောင်းပြီး ကိုယ့်ကိုလည်း အရင်ထက်ပိုချစ်ပါဦးလို့ ပြောရင်း... မွေးနေ့မှာ ပျော်ရွှင်ပါစေ ကလေးငယ်ရေ... ✈️🧸💍🌸✨</p>
+            </div>
+            <button class="btn" onclick="nextStep(3)">လက်စွပ်၊ ပန်းနဲ့ ဝက်ဝံရုပ် ရွေးမယ် 💍</button>
+        </div>
+
+        <!-- Step 3: Gift Selection Boxes (Rings, Bouquets, Bears) -->
+        <div id="step-3" class="section">
+            <h1>Pick Your Gift Box</h1>
+            <p class="center-text">ကိုယ့်ဆီကနေ ပေးချင်တဲ့ လက်ဆောင်ပုံစံလေးတွေကို ရွေးကြည့်ရအောင် 👇</p>
+            
+            <div class="grid-box">
+                <div class="choice-card" onclick="selectGift('Diamond Solitaire & Sakura Bouquet (စိန်လက်စွပ်နဲ့ ဆာကူရာပန်းစည်း)')">
+                    <div class="card-icon">💍🌸</div>
+                    <div class="card-title">Classic Diamond & Sakura</div>
+                </div>
+                <div class="choice-card" onclick="selectGift('Cute Teddy Bear & Rose Gold Ring (ဝက်ဝံရုပ်လေးနဲ့ ရွှေပန်းရောင်လက်စွပ်)')">
+                    <div class="card-icon">🧸💖</div>
+                    <div class="card-title">Teddy Bear & Rose Gold</div>
+                </div>
+                <div class="choice-card" onclick="selectGift('Giant Bear & Crown Ring (ဝက်ဝံကြီးနဲ့ မင်းသမီးသရဖူ လက်စွပ်)')">
+                    <div class="card-icon">👑🧸</div>
+                    <div class="card-title">Giant Bear & Crown</div>
+                </div>
+                <div class="choice-card" onclick="selectGift('Full Set: Bear, Sakura Bouquet & Diamond (ဝက်ဝံရုပ်၊ ဆာကူရာပန်းစည်းနဲ့ စိန်လက်စွပ်အစုံ)')">
+                    <div class="card-icon">🌹🧸💍</div>
+                    <div class="card-title">The Ultimate Full Set</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Final Result -->
+        <div id="step-4" class="section">
+            <h1>Yay! 23rd Birthday! 🎉</h1>
+            <p class="center-text">မင်းရွေးချယ်လိုက်တဲ့ အထူးလက်ဆောင်ပုံစံကတော့ -</p>
+            <div class="summary-box" id="result-text"></div>
+            <p class="center-text">၂၃ နှစ်ပြည့် မွေးနေ့မှာ အပျော်ရွှင်ရဆုံးနဲ့ ကျန်းမာဆုံး ဖြစ်ပါစေ။ ဂျပန်က ပြန်လာရင် လက်တွေ့လက်ဆောင်တွေ အကုန်လာယူတော့နော်။ ချစ်တယ်! ❤️✈️</p>
+            <button class="btn" onclick="resetApp()">အစကနေ ပြန်ကြည့်မည် 🔄</button>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(stepNumber) {
+            document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+            document.getElementById('step-' + stepNumber).classList.add('active');
+        }
+
+        function selectGift(giftName) {
+            document.getElementById('result-text').innerText = "🎁 " + giftName;
+            nextStep(4);
+        }
+
+        function resetApp() {
+            nextStep(1);
+        }
+
+        // Floating Hearts, Flowers & Bears Generator
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = ['❤️', '🌸', '🧸', '✨'][Math.floor(Math.random() * 4)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.getElementById('hearts-container').appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
+</body>
+                  </html>
+                  
